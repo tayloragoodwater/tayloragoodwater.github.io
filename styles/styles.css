@@ -1,0 +1,55 @@
+@font-face {
+    font-family: palatino;
+    src: url(palatino.ttf);
+  }
+.header{
+    background-color: #242424;
+    height: 100vh;
+    text-align: left;
+    padding-left: 32px;
+    min-width:fit-content;
+}
+body{
+    max-width:100vw;
+}
+h1{
+    color: white;
+    font-family:palatino;
+    font-size:32px;
+    letter-spacing: 4px;
+    padding-top: 32px;
+    padding-bottom: 8px;
+}
+p{
+    color: white;
+    font-family:palatino;
+    font-size: 16px;
+    letter-spacing:2px;
+    padding-top:8px;
+}
+a.nostyle:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+a.nostyle:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+.content{
+    background-color: #242424;
+    overflow-y: scroll;
+    max-height: 100vh;
+    padding-top:16px;
+}
+.column{
+    padding: 0px 8px;
+    min-width: 40vh;
+    background-color: #242424;
+}
+img{
+    padding-bottom: 12px;
+    max-width: 100%;
+    min-width: 100%;
+}
