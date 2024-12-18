@@ -21,10 +21,19 @@ const conceptsDescriptions = [
     "Description for image 2"
 ];
 
+const conceptsFilePaths = [
+    "static/images/concept1.png",
+    "static/images/concept2.png",
+    "static/images/concept3.png",
+    "static/images/concept4.png",
+    "static/images/concept5.png",
+    "static/images/concept6.png",
+    "static/images/concept7.png",
+];
+
 function populateConcepts(){
     removeImages();
-    const imageFilePaths = ['static/images/IMG_0013.jpg', 'static/images/IMG_0005.jpg'];
-    addImages(imageFilePaths, conceptsDescriptions);
+    addImages(conceptsFilePaths, conceptsDescriptions);
 }
 
 /*-----------------------------
@@ -36,10 +45,13 @@ const paintingDescriptions = [
     "Description for image 2"
 ];
 
+const paintingFilePaths = [
+
+];
+
 function populatePainting(){
     removeImages();
-    const imageFilePaths = ['static/images/IMG_0013.jpg', 'static/images/IMG_0005.jpg'];
-    addImages(imageFilePaths, paintingDescriptions);
+    addImages(paintingFilePaths, paintingDescriptions);
 }
 
 /*-----------------------------
@@ -51,10 +63,13 @@ const lifeAnatomyDescriptions = [
     "Description for image 2"
 ];
 
+const lifeAnatomyFilePaths = [
+
+];
+
 function populateLifeAnatomy(){
     removeImages();
-    const imageFilePaths = ['static/images/IMG_0013.jpg', 'static/images/IMG_0005.jpg'];
-    addImages(imageFilePaths, lifeAnatomyDescriptions);
+    addImages(lifeAnatomyFilePaths, lifeAnatomyDescriptions);
 }
 
 /*-----------------------------
@@ -66,10 +81,13 @@ const videoDescriptions = [
     "Description for image 2"
 ];
 
+const videoFilePaths = [
+
+];
+
 function populateVideo(){
     removeImages();
-    const imageFilePaths = ['static/images/IMG_0013.jpg', 'static/images/IMG_0005.jpg'];
-    addImages(imageFilePaths, videoDescriptions);
+    addImages(videoFilePaths, videoDescriptions);
 }
 
 /*-----------------------------
@@ -81,10 +99,13 @@ const musicDescriptions = [
     "Description for image 2"
 ];
 
+const musicFilePaths = [
+
+];
+
 function populateMusic(){
     removeImages();
-    const imageFilePaths = ['static/images/IMG_0013.jpg', 'static/images/IMG_0005.jpg'];
-    addImages(imageFilePaths, musicDescriptions);
+    addImages(musicFilePaths, musicDescriptions);
 }
 
 /*-----------------------------
@@ -112,7 +133,7 @@ function addImages(imageFilePaths, descriptions){
     const imgElement = document.createElement('img');
     imgElement.src = filename;
     imgElement.alt = `Image: ${filename}`;
-    imgElement.className = "img-thumbnail";
+    imgElement.className = "page-img";
     contentDiv.appendChild(imgElement);
 
     // Create and append the description element
