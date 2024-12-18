@@ -1,6 +1,6 @@
 @font-face {
     font-family: palatino;
-    src: url(palatino.ttf);
+    src: url(/static/fonts/palatino.ttf);
   }
 .header{
     background-color: #242424;
@@ -8,6 +8,9 @@
     text-align: left;
     padding-left: 32px;
     min-width:fit-content;
+}
+.header p{
+    cursor: pointer;
 }
 body{
     max-width:100vw;
@@ -48,8 +51,20 @@ a.nostyle:visited {
     min-width: 40vh;
     background-color: #242424;
 }
-img{
-    padding-bottom: 12px;
+.index-img{
+    padding-bottom: 16px;
     max-width: 100%;
     min-width: 100%;
+}
+.modal-body{
+    background-color: #242424;
+    padding:4px;
+}
+.modal-body img{
+    max-height:90vh;
+}
+.page-img{
+    max-height:100vh;
+    padding-bottom:4px;
+    
 }
