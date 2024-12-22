@@ -67,3 +67,7 @@ a.nostyle:visited {
     max-height:90vh;
     padding-bottom:4px;
 }
+.youtubePlayer{
+    height: 50vh;
+    width:80vh;
+}

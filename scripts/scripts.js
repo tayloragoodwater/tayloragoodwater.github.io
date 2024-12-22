@@ -37,7 +37,7 @@ const conceptsFilePaths = [
 ];
 
 function populateConcepts(){
-    removeImages();
+    clearContent();
     addImages(conceptsFilePaths, conceptsDescriptions);
 }
 
@@ -76,7 +76,7 @@ const paintingFilePaths = [
     'static/images/painting7.jpg',
     'static/images/painting8.jpg',
     'static/images/painting9.png',
-    'static/images/painting10.jpg',
+    'static/images/painting10.png',
     'static/images/painting11.png',
     'static/images/painting12.jpg',
     'static/images/painting13.jpg',
@@ -88,7 +88,7 @@ const paintingFilePaths = [
 ];
 
 function populatePainting(){
-    removeImages();
+    clearContent();
     addImages(paintingFilePaths, paintingDescriptions);
 }
 
@@ -97,16 +97,25 @@ life/anatomy/figure drawing page
 -----------------------------*/
 //add descriptions and paths to files to be included on this page
 const lifeAnatomyDescriptions = [
-    "Description for image 1",
-    "Description for image 2"
+    "Figure Study, Understanding the Terminus, Digital Sketch (Procreate).",
+    "Gesture Study, Graphite.",
+    "Portrait Studies, Graphite.",
+    "Torso Studies, Graphite.",
+    "Life Drawing 1, Graphite.",
+    "Life Drawing 2, Graphite."
 ];
 
 const lifeAnatomyFilePaths = [
-
+    "static/images/figure1.png",
+    "static/images/figure2.png",
+    "static/images/figure3.png",
+    "static/images/figure4.png",
+    "static/images/figure5.png",
+    "static/images/figure6.png"
 ];
 
 function populateLifeAnatomy(){
-    removeImages();
+    clearContent();
     addImages(lifeAnatomyFilePaths, lifeAnatomyDescriptions);
 }
 
@@ -115,16 +124,31 @@ video/animations page
 -----------------------------*/
 //add descriptions and paths to files to be included on this page
 const videoDescriptions = [
-    "Description for image 1",
-    "Description for image 2"
+    "Lamp Man, Digital Animation (procreate) for band promotion.",
+    "Giant Walking Forward, Digital Animation (procreate) for Stereoscope video.",
+    "Giant Running Sideways, Digital Animation (procreate) for Stereoscope video.",
+    "Giant Family On The Run, Digital Animation (procreate) for Stereoscope video.",
+    "Space Cowboy Sees Quetzalcoatl, Digital Animation (procreate), an animated short WIP."
 ];
 
 const videoFilePaths = [
+    
+];
 
+const youtubeDescriptions = [
+    "i cannot fathom the image, Collaborative effort. This video was one of my first endeavors into multi-media art and art direction.",
+    "Stereoscope, A music video directed by me for my band Arbordae's single of the same name."
+];
+
+const youtubeURLs = [
+    'https://www.youtube.com/embed/z7moPtU4mNk?si=EfU1mwj-SY-Xgmu1',
+    'https://www.youtube.com/embed/K1HJGX3DW5k?si=dbajQFo3SuPKLv1z'
 ];
 
 function populateVideo(){
-    removeImages();
+    clearContent();
+    clearVideos(youtubeURLs);
+    attachVideos(youtubeURLs, youtubeDescriptions);
     addImages(videoFilePaths, videoDescriptions);
 }
 
@@ -142,7 +166,8 @@ const musicFilePaths = [
 ];
 
 function populateMusic(){
-    removeImages();
+    clearContent();
+    clearVideos(youtubeURLs);
     addImages(musicFilePaths, musicDescriptions);
 }
 
@@ -151,7 +176,7 @@ other functions: adding and removing images
 per page division. safe to ignore when
 modifying page content. 
 -----------------------------*/
-function removeImages() {
+function clearContent() {
     const contentDiv = document.getElementById('content');
     const images = contentDiv.getElementsByTagName('img'); 
     const descriptions = contentDiv.getElementsByTagName('p');
@@ -163,6 +188,10 @@ function removeImages() {
       }
   }
 
+  function clearVideos(youtubeURLs) {
+    
+  }
+
 function addImages(imageFilePaths, descriptions){
   const contentDiv = document.getElementById('content');
 
@@ -172,14 +201,36 @@ function addImages(imageFilePaths, descriptions){
     imgElement.src = filename;
     imgElement.alt = `Image: ${filename}`;
     imgElement.className = "page-img";
+    imgElement.id = filename;
     contentDiv.appendChild(imgElement);
 
     // Create and append the description element
     const descriptionElement = document.createElement('p');
     descriptionElement.textContent = descriptions[index];
-    descriptionElement.style.textAlign = "center";
+    //descriptionElement.style.textAlign = "center";
     contentDiv.appendChild(descriptionElement);
   });
+  window.scrollTo(0,0);
+}
+
+
+function attachVideos(URLs, descriptions){
+    const contentDiv = document.getElementById('content');
+
+    URLs.forEach((url, index) => {
+        // Create and append the iframe element
+        const vidElement = document.createElement('iframe');
+        vidElement.src = url;
+        vidElement.alt = `Youtube Link: ${url}`;
+        vidElement.classList.add('youtubePlayer');
+        contentDiv.appendChild(vidElement);
+
+        // Create and append the description element
+        const descriptionElement = document.createElement('p');
+        descriptionElement.textContent = descriptions[index];
+        //descriptionElement.style.textAlign = "left";
+        contentDiv.appendChild(descriptionElement);
+    });
 }
 
 //modal functions **ignore me**
@@ -195,4 +246,7 @@ function openModal(image) {
     const modal = document.getElementById('imageModal');
     modal.style.display = 'none'; // Hide the modal
   }
+
+
+
   
