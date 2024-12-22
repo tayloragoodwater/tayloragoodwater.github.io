@@ -165,6 +165,14 @@ const musicFilePaths = [
 
 ];
 
+const musicURLs = [
+    'https://www.youtube.com/embed/xJFuiLZeiOE?si=2D164cnQbnbDZ-Fv'
+];
+
+const musicVideosDescs = [
+    'Wick, A live recording of an original track by Arbordae, I played bass in this one.'
+];
+
 function populateMusic(){
     clearContent();
     clearVideos(youtubeURLs);
