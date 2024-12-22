@@ -17,8 +17,13 @@ concepts/design page
 -----------------------------*/
 //add descriptions and paths to files to be included on this page
 const conceptsDescriptions = [
-    "Description for image 1",
-    "Description for image 2"
+    "An original and fundamental ideation for a video game project called Sleeping Giant",
+    "A closer look at the main charcter, Quasi",
+    "Enemy concepts for Sleeping Giant",
+    "3D model Of Quasi's head (front view)",
+    "(back view)",
+    "Backdrop and ingredient designs for original tabletop card game, Spellbound",
+    "The entire deck for Spellbound"
 ];
 
 const conceptsFilePaths = [
@@ -41,12 +46,45 @@ painting page
 -----------------------------*/
 //add descriptions and paths to files to be included on this page
 const paintingDescriptions = [
-    "Description for image 1",
-    "Description for image 2"
+    "When Strangers Meet, digital painting (Procreate)",
+    "That Sinking Feeling, digital painting (Procreate)",
+    "The Glass is Full, digital painting (Heavypaint)",
+    "Caught in the Act of Desperation, digital painting (Procreate)",
+    "In the hands of Love, digital illustration (Procreate)",
+    "Finding it getting closer, digital painting (Heavypaint)",
+    "Self Portrait in Blue, Oil Pastel",
+    "Fingerpainting of Party Man, digital painting (Heavypaint)",
+    "Haven't Much Left to See, Oil Pastel",
+    "Rags to Riches, Oil Pastel & Photo Editing (Photoshop)",
+    "Still Left Up to You, Oil Pastel & Photo Editing (Photoshop)",
+    "Peace With My Brothers & Sisters (Breakthrough Into Your Whipping Wings), Oil pastel",
+    "Ideas Left Untold, Oil Pastel",
+    "Sick as Dog, Oil Pastel",
+    "Dragging the Monkey All Around, Oil Pastel",
+    "Wild Combination, Oil Pastel",
+    "City Lights & Participants, Oil Pastel",
+    "The Incessant Whirring of Its Waking Wings, Oil Pastel"
 ];
 
 const paintingFilePaths = [
-
+    'static/images/painting1.png',
+    'static/images/painting2.JPG',
+    'static/images/painting3.png',
+    'static/images/painting4.png',
+    'static/images/painting5.png',
+    'static/images/painting6.jpg',
+    'static/images/painting7.jpg',
+    'static/images/painting8.jpg',
+    'static/images/painting9.png',
+    'static/images/painting10.jpg',
+    'static/images/painting11.png',
+    'static/images/painting12.jpg',
+    'static/images/painting13.jpg',
+    'static/images/painting14.jpg',
+    'static/images/painting15.png',
+    'static/images/painting16.jpg',
+    'static/images/painting17.jpg',
+    'static/images/painting18.jpg',
 ];
 
 function populatePainting(){
