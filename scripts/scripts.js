@@ -150,7 +150,6 @@ const youtubeURLs = [
 
 function populateVideo(){
     clearContent();
-    clearVideos(youtubeURLs);
     attachVideos(youtubeURLs, youtubeDescriptions);
     addImages(videoFilePaths, videoDescriptions);
 }
@@ -186,12 +185,11 @@ const musicURLs = [
 ];
 
 const musicVideosDescs = [
-    'Wick, A live recording of an original track by Arbordae, I played bass in this one.'
+    'A live recording of original single, Wick, by Arbordae.'
 ];
 
 function populateMusic(){
     clearContent();
-    clearVideos(youtubeURLs);
     attachVideos(musicURLs, musicVideosDescs);
     addImages(musicFilePaths, musicDescriptions);
 }
@@ -205,16 +203,16 @@ function clearContent() {
     const contentDiv = document.getElementById('content');
     const images = contentDiv.getElementsByTagName('img'); 
     const descriptions = contentDiv.getElementsByTagName('p');
+    const iframes = document.getElementsByTagName('iframe');
     while (images.length > 0) {
       images[0].remove();
     }
     while (descriptions.length > 0) {
         descriptions[0].remove();
-      }
-}
-
-function clearVideos(youtubeURLs) {
-    
+    }
+    while (iframes.length > 0){
+        iframes[0].remove();
+    }
 }
 
 function addImages(imageFilePaths, descriptions){
@@ -265,12 +263,12 @@ function openModal(image) {
     
     const modal = new bootstrap.Modal(document.getElementById('imageModal'));
     modal.show();
-  }
+}
   
-  function closeModal() {
+function closeModal() {
     const modal = document.getElementById('imageModal');
     modal.style.display = 'none'; // Hide the modal
-  }
+}
 
 
 
