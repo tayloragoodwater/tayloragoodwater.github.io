@@ -127,12 +127,15 @@ const videoDescriptions = [
     "Lamp Man, Digital Animation (procreate) for band promotion.",
     "Giant Walking Forward, Digital Animation (procreate) for Stereoscope video.",
     "Giant Running Sideways, Digital Animation (procreate) for Stereoscope video.",
-    "Giant Family On The Run, Digital Animation (procreate) for Stereoscope video.",
-    "Space Cowboy Sees Quetzalcoatl, Digital Animation (procreate), an animated short WIP."
+    "Giant Family On The Run, Digital Animation (procreate) for Stereoscope video."
+    //"Space Cowboy Sees Quetzalcoatl, Digital Animation (procreate), an animated short WIP."
 ];
 
 const videoFilePaths = [
-    
+    'static/images/video1.gif',
+    'static/images/video2.gif',
+    'static/images/video3.gif',
+    'static/images/video4.gif'
 ];
 
 const youtubeDescriptions = [
@@ -157,12 +160,25 @@ music page
 -----------------------------*/
 //add descriptions and paths to files to be included on this page
 const musicDescriptions = [
-    "Description for image 1",
-    "Description for image 2"
-];
+    "Stereoscope Single Cover, Brush Pen & Photo Editing (Photoshop)",
+    "Sense of Scene Single Cover, Oil Pastel & Photo Editing (Photoshop & Procreate)",
+    "Honey Single Cover, Oil Pastel & Photo Editing (Photoshop & Procreate)",
+    "Light Bearer T, Oil Pastel. A Graphic Design for an Arbordae T-Shirt.",
+    "Window Bearer T, Oil Pastel. A Graphic Design for an Arbordae T-Shirt.",
+    "Move The Old Way Tote, Photo Edit (Photoshop). A Graphic Design for an Arbordae Tote Bag.",
+    "Stereoscope Promotion, Photo Edit (Photoshop). A Graphic used in single promotion for the song Stereoscope on social media.",
+    "Flag Men Sticker, Digital Illustration (Procreate). A Graphic Design for an Arbordae Sticker."
+    ];
 
 const musicFilePaths = [
-
+    'static/images/music1.JPG',
+    'static/images/music2.png',
+    'static/images/music3.png',
+    'static/images/music4.JPG',
+    'static/images/music5.JPG',
+    'static/images/music6.png',
+    'static/images/music7.PNG',
+    'static/images/music8.png'
 ];
 
 const musicURLs = [
@@ -176,6 +192,7 @@ const musicVideosDescs = [
 function populateMusic(){
     clearContent();
     clearVideos(youtubeURLs);
+    attachVideos(musicURLs, musicVideosDescs);
     addImages(musicFilePaths, musicDescriptions);
 }
 
@@ -194,11 +211,11 @@ function clearContent() {
     while (descriptions.length > 0) {
         descriptions[0].remove();
       }
-  }
+}
 
-  function clearVideos(youtubeURLs) {
+function clearVideos(youtubeURLs) {
     
-  }
+}
 
 function addImages(imageFilePaths, descriptions){
   const contentDiv = document.getElementById('content');
