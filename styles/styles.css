@@ -59,6 +59,13 @@ a.nostyle:visited {
 .modal-body{
     background-color: #242424;
     padding:4px;
+    width: fit-content;
+    border-radius:4px;
+}
+.modal-content{
+    width:fit-content !important;
+    display: flex;
+    justify-content: center;
 }
 .modal-body img{
     max-height:90vh;

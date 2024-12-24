@@ -233,7 +233,7 @@ function addImages(imageFilePaths, descriptions){
     //descriptionElement.style.textAlign = "center";
     contentDiv.appendChild(descriptionElement);
   });
-  window.scrollTo(0,0);
+  contentDiv.scrollTo(0,0);
 }
 
 
