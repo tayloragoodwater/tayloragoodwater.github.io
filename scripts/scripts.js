@@ -131,15 +131,16 @@ const videoDescriptions = [
     "Lamp Man, Digital Animation (procreate) for band promotion.",
     "Giant Walking Forward, Digital Animation (procreate) for Stereoscope video.",
     "Giant Running Sideways, Digital Animation (procreate) for Stereoscope video.",
-    "Giant Family On The Run, Digital Animation (procreate) for Stereoscope video."
-    //"Space Cowboy Sees Quetzalcoatl, Digital Animation (procreate), an animated short WIP."
+    "Giant Family On The Run, Digital Animation (procreate) for Stereoscope video.",
+    "Space Cowboy Sees Quetzalcoatl, Digital Animation (procreate), an animated short WIP."
 ];
 
 const videoFilePaths = [
     'static/images/video1.gif',
     'static/images/video2.gif',
     'static/images/video3.gif',
-    'static/images/video4.gif'
+    'static/images/video4.gif',
+    'static/images/video5.gif'
 ];
 
 const youtubeDescriptions = [
