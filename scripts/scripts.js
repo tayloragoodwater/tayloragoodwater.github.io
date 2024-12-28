@@ -23,7 +23,9 @@ const conceptsDescriptions = [
     "3D model Of Quasi's head (front view)",
     "(back view)",
     "Backdrop and ingredient designs for original tabletop card game, Spellbound",
-    "The entire deck for Spellbound"
+    "The entire deck for Spellbound",
+    "Rulesheet for Spellbound",
+    "Printed deck used for playtesting Spellbound"
 ];
 
 const conceptsFilePaths = [
@@ -34,6 +36,8 @@ const conceptsFilePaths = [
     "static/images/concept5.png",
     "static/images/concept6.png",
     "static/images/concept7.png",
+    "static/images/concept8.png",
+    "static/images/concept9.png",
 ];
 
 function populateConcepts(){
