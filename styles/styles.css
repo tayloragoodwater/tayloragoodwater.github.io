@@ -75,6 +75,18 @@ a.nostyle:visited {
     padding-bottom:4px;
 }
 .youtubePlayer{
-    height: 50vh;
-    width:80vh;
+    height:80vh;
+    width: 70vw;
+}
+.description{
+    padding-left:12px;
+    padding-right:12px;
+}
+.imgdiv{
+    width:fit-content;
+}
+.divider{
+    border-bottom: 1px solid grey;
+    width: 95%;
+    margin-bottom:16px;
 }

@@ -21,7 +21,7 @@ const conceptsDescriptions = [
     "A closer look at the main charcter, Quasi",
     "Enemy concepts for Sleeping Giant",
     "3D model Of Quasi's head (front view)",
-    "(back view)",
+    "(side view)",
     "Backdrop and ingredient designs for original tabletop card game, Spellbound",
     "The entire deck for Spellbound",
     "Rulesheet for Spellbound",
@@ -50,25 +50,26 @@ painting page
 -----------------------------*/
 //add descriptions and paths to files to be included on this page
 const paintingDescriptions = [
-    "When Strangers Meet, digital painting (Procreate)",
-    "That Sinking Feeling, digital painting (Procreate)",
-    "The Glass is Full, digital painting (Heavypaint)",
-    "Caught in the Act of Desperation, digital painting (Procreate)",
-    "In the hands of Love, digital illustration (Procreate)",
-    "Finding it getting closer, digital painting (Heavypaint)",
-    "Self Portrait in Blue, Oil Pastel",
-    "Fingerpainting of Party Man, digital painting (Heavypaint)",
-    "Haven't Much Left to See, Oil Pastel",
-    "Rags to Riches, Oil Pastel & Photo Editing (Photoshop)",
-    "Still Left Up to You, Oil Pastel & Photo Editing (Photoshop)",
-    "Peace With My Brothers & Sisters (Breakthrough Into Your Whipping Wings), Oil pastel",
-    "Ideas Left Untold, Oil Pastel",
-    "Sick as Dog, Oil Pastel",
-    "Dragging the Monkey All Around, Oil Pastel",
-    "Wild Combination, Oil Pastel",
-    "City Lights & Participants, Oil Pastel",
-    "The Incessant Whirring of Its Waking Wings, Oil Pastel"
+    "\"When Strangers Meet\", digital painting (Procreate)",
+    "\"That Sinking Feeling\", digital painting (Procreate)",
+    "\"The Glass is Full\", digital painting (Heavypaint)",
+    "\"Caught in the Act of Desperation\", digital painting (Procreate)",
+    "\"In the hands of Love\", digital illustration (Procreate)",
+    "\"Finding it getting closer\", digital painting (Heavypaint)",
+    "\"Self Portrait in Blue\", Oil Pastel",
+    "\"Fingerpainting of Party Man\", digital painting (Heavypaint)",
+    "\"Haven't Much Left to See\", Oil Pastel",
+    "\"Rags to Riches\", Oil Pastel & Photo Editing (Photoshop)",
+    "\"Still Left Up to You\", Oil Pastel & Photo Editing (Photoshop)",
+    "\"Peace With My Brothers & Sisters (Breakthrough Into Your Whipping Wings)\", Oil pastel",
+    "\"Ideas Left Untold\", Oil Pastel",
+    "\"Sick as Dog\", Oil Pastel",
+    "\"Dragging the Monkey All Around\", Oil Pastel",
+    "\"Wild Combination\", Oil Pastel",
+    "\"City Lights & Participants\", Oil Pastel",
+    "\"The Incessant Whirring of Its Waking Wings\", Oil Pastel"
 ];
+
 
 const paintingFilePaths = [
     'static/images/painting1.png',
@@ -145,7 +146,7 @@ const videoFilePaths = [
 
 const youtubeDescriptions = [
     "i cannot fathom the image, Collaborative effort. This video was one of my first endeavors into multi-media art and art direction.",
-    "Stereoscope, A music video directed by me for my band Arbordae's single of the same name."
+    "Stereoscope music video, directed by me."
 ];
 
 const youtubeURLs = [
@@ -209,6 +210,8 @@ function clearContent() {
     const images = contentDiv.getElementsByTagName('img'); 
     const descriptions = contentDiv.getElementsByTagName('p');
     const iframes = document.getElementsByTagName('iframe');
+    const imgDivs = document.getElementsByClassName('imgdiv');
+    const dividers = document.getElementsByClassName('divider');
     while (images.length > 0) {
       images[0].remove();
     }
@@ -218,25 +221,47 @@ function clearContent() {
     while (iframes.length > 0){
         iframes[0].remove();
     }
+    while (imgDivs.length > 0) {
+        imgDivs[0].remove();
+    }
+    while (dividers.length > 0) {
+        dividers[0].remove();
+    }
 }
 
 function addImages(imageFilePaths, descriptions){
   const contentDiv = document.getElementById('content');
 
   imageFilePaths.forEach((filename, index) => {
+    // Create and append div for image and desc
+    const imgDiv = document.createElement('div');
+    imgDiv.classList.add('imgdiv');
+    contentDiv.appendChild(imgDiv);
+
     // Create and append the image element
     const imgElement = document.createElement('img');
     imgElement.src = filename;
     imgElement.alt = `Image: ${filename}`;
     imgElement.className = "page-img";
     imgElement.id = filename;
-    contentDiv.appendChild(imgElement);
+    imgDiv.appendChild(imgElement);
+
+    imgElement.onload = function() {
+        imgDiv.style.width = imgElement.offsetWidth + 'px';
+    };
 
     // Create and append the description element
     const descriptionElement = document.createElement('p');
+    descriptionElement.classList.add('description');
     descriptionElement.textContent = descriptions[index];
     //descriptionElement.style.textAlign = "center";
-    contentDiv.appendChild(descriptionElement);
+    imgDiv.appendChild(descriptionElement);
+
+    // Create and append divider between img divs
+    const divider = document.createElement('div');
+    divider.classList.add('divider');
+    contentDiv.appendChild(divider);
+
   });
   contentDiv.scrollTo(0,0);
 }
@@ -256,6 +281,7 @@ function attachVideos(URLs, descriptions){
         // Create and append the description element
         const descriptionElement = document.createElement('p');
         descriptionElement.textContent = descriptions[index];
+        descriptionElement.classList.add('description');
         //descriptionElement.style.textAlign = "left";
         contentDiv.appendChild(descriptionElement);
     });
